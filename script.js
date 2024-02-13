@@ -14,9 +14,23 @@ yesBtn.addEventListener("click", () => {
     // Change text and GIF on first click
     question.innerHTML = "I love you Ai😘!";
     gif.src = "https://media1.giphy.com/media/iCVzZwwE6QNAV2tEE0/giphy.gif";
-    yesBtn.innerHTML = "Click me again";
+    yesBtn.disabled = true; // Disable the button initially
     yesBtn.style.backgroundColor = "#ff3860"; // Change background color to yellow (or any color you prefer)
+
+    // Hide the "Click me again" button initially
+    yesBtn.style.display = "none";
+
+    // Show the "Click me again" button after 5 seconds
+    setTimeout(() => {
+      yesBtn.style.display = "block";
+      yesBtn.innerHTML = "Click me again";
+      yesBtn.style.margin = "auto"; // Center the button
+      yesBtn.disabled = false; // Enable the button after 5 seconds
+    }, 5000); // 5 seconds delay
     clickedOnce = true;
+
+    // Hide the "No" button
+    noBtn.style.display = "none";
   }
 });
 
