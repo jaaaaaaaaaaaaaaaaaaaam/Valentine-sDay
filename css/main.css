@@ -1561,10 +1561,9 @@ body {
 }
 
 .heart-envelope {
-  position: fixed;
-  bottom: 20px; /* Adjust as needed */
-  left: 46.7%;
-  transform: translateX(-50%);
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: auto; /* Adjust as needed */
   width: 100px; /* Adjust as needed */
   transition: transform 0.5s ease-in-out;
   opacity: 0;
@@ -1573,7 +1572,7 @@ body {
 
 .heart-envelope.show {
   opacity: 1;
-  transform: translateX(-50%) rotate(15deg); /* Adjust the degree of tilt */
+  transform: rotate(100deg); /* Adjust the degree of tilt */
 }
 
 .hidden {

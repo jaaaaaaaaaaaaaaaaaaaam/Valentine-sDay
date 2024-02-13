@@ -5,6 +5,7 @@ body {
     min-height: 100vh;
     background: #ffabab;
 }
+
 .valentines-container {
     display: flex;
     justify-content: center;
@@ -12,8 +13,32 @@ body {
     height: 100vh;
 }
 
+.envelope {
+    position: relative;
+    width: 200px; /* Adjust as needed */
+    transition: transform 0.5s ease-in-out;
+    animation: tilt 5s infinite alternate; /* Continuous tilt animation */
+}
+
+@keyframes tilt {
+    0% {
+        transform: rotate(-5deg); /* Initial tilt angle */
+    }
+    50% {
+        transform: rotate(5deg); /* Tilt to the other side */
+    }
+    100% {
+        transform: rotate(-5deg); /* Return to the initial tilt angle */
+    }
+}
+
+.envelope:hover {
+    transform: rotate(-10deg); /* Adjust the degree of tilt */
+}
+
 .envelope img {
-    cursor: pointer;
+    width: 100%;
+    height: auto;
 }
 
 .modal {

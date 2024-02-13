@@ -9,7 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
             heartEnvelope.classList.add('show');
     
             heartEnvelope.addEventListener('click', function() {
-                window.location.href = 'envelope.html';
+                // Simulate page flip animation
+                heartEnvelope.classList.remove('show');
+                heartEnvelope.classList.add('flipping');
+                
+                // After a short delay, redirect to envelope.html
+                setTimeout(function() {
+                    window.location.href = 'envelope.html';
+                }, 500); // Adjust delay as needed for the animation
             });
         }, 5000); // Show after 5 seconds
     });
