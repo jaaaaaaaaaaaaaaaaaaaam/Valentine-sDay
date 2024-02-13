@@ -9,7 +9,7 @@ let clickedOnce = false;
 yesBtn.addEventListener("click", () => {
   if (clickedOnce) {
     // Redirect to index.html if clicked for the second time
-    window.location.href = "index.html";
+    window.location.href = "suprise.html";
   } else {
     // Change text and GIF on first click
     question.innerHTML = "I love you Ai😘!";
